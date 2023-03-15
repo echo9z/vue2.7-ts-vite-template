@@ -17,6 +17,11 @@
 import { ref, computed } from 'vue'
 import { useCounterStore } from '@/store/modules/count'
 import Parent from '../../components/Parent.vue';
+
+defineOptions({
+  name: 'HomeX'
+})
+
 const countStore = useCounterStore()
 // const count = ref(0)
 // count.value = countStore.count

@@ -9,3 +9,6 @@
 
 ## @vitejs/plugin-legacy
 为生产构建提供传统浏览器支持。
+
+## unplugin-vue-define-options
+自定义组件name的插件
