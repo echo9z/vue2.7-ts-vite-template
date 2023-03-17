@@ -1,21 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ESNext", // 遵循es版本
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "jsx": "preserve",
-    "resolveJsonModule": true,
+    "module": "ESNext", // 打包模块类型ESNext
+    "moduleResolution": "Node", // 按照node模块来解析
+    "strict": true, // 是否启动严格模式
+    "jsx": "preserve", // jsx 不转
+    "resolveJsonModule": true, // 解析json模块
     "isolatedModules": true,
-    "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true,
-    "noEmit": true
+    "esModuleInterop": true, // ⽀持es6,commonjs模块
+    "lib": ["ESNext", "DOM"], // 编译时⽤的库
+    "skipLibCheck": true, // 跳过类库检测
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // "types": ["unplugin-vue-define-options"] // sfc 添加 name属性的包需要的
   },
   "vueCompilerOptions": {
     "target": 2.7
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "dist", "**/*.js"], // 排除掉哪些类库
   "references": [{ "path": "./tsconfig.node.json" }]
 }

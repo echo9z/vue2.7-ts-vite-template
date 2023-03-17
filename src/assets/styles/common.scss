@@ -1,0 +1,10 @@
+$red: #ff0000;
+
+@mixin ellipsis-($i) {
+    overflow: hidden; //超出的文本隐藏
+    text-overflow: ellipsis; //溢出用省略号显示
+    display: -webkit-box;
+    white-space: nowrap; // 默认不换行；
+    -webkit-line-clamp: $i; // 超出多少行
+    -webkit-box-orient: vertical;
+}

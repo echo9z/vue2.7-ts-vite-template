@@ -10,17 +10,25 @@
     {{ count }}
     <button @click="clickBtn">点我</button>
     <Parent :msg="'传入str'" />
+    <el-button type="primary">主要按钮</el-button>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useCounterStore } from '@/store/modules/count'
-import Parent from '../../components/Parent.vue';
+import Parent from '@/components/Parent.vue'
 
-defineOptions({
-  name: 'HomeX'
+defineProps({
+  str: {
+    type: String,
+    default: ''
+  }
 })
+
+// defineOptions({
+//   name: 'HomeX'
+// })
 
 const countStore = useCounterStore()
 // const count = ref(0)

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const props = defineProps<{ msg: string }>()
+const props = defineProps<{ msg: string }> ()
 
 const msg = ref(props.msg)
 </script>

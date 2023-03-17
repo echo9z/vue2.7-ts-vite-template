@@ -1,0 +1,139 @@
+/* 把我们所有标签的内外边距清零 */
+* {
+  margin: 0;
+  padding: 0
+}
+
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+  font-style: normal
+}
+
+/* 去掉li 的小圆点 */
+li {
+  list-style: none
+}
+
+img {
+  /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+  border: 0;
+  /* 取消图片底侧有空白缝隙的问题 */
+  vertical-align: middle
+}
+
+button {
+  /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+  cursor: pointer
+}
+
+/* 改变a链接的默认样式,颜色和下划线 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+button,
+input {
+  /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  outline: none;
+}
+
+body {
+  /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  font: 14px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0
+}
+
+.clearfix {
+  *zoom: 1
+}
+
+// 上面为网络中获取到的京东css重置方案  下面为Modern CSS Reset重置方案  另有normalize.css方案（对IE较好）
+
+/* Box sizing rules */
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
+
+/* Remove default margin */
+// body,
+// h1,
+// h2,
+// h3,
+// h4,
+// p,
+// figure,
+// blockquote,
+// dl,
+// dd {
+//   margin: 0;
+// }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+// ul[role='list'],
+// ol[role='list'] {
+//   list-style: none;
+// }
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+// img,
+// picture {
+//   max-width: 100%;
+//   display: block;
+// }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
